@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" 
+href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
+integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" 
+crossorigin="anonymous">
+    
+    <title>Document</title>
+    
+
+
+</head>
+<body>
+
+<div class="container">
+
+<!--Float -->
+<div class="float-left"> Float Left</div>
+<div class="float-right"> Float Right </div>
+<div class="float-none"> NO float </div>
+
+
+<!--Responsive FLoat-->
+<div class="float-sm-right">Float rihgt on small screens</div>
+<div class="float-md-right">Float rihgt on medium screens</div>
+<div class="float-lg-right">Float rihgt on large screens</div>
+<div class="float-xg-right">Float rihgt on xlarge screens</div>
+
+
+<!--Fixed Top-->
+<h3 class="fixed-top">fixed top</h3>
+<p>fixed-top 常用於網頁開發，尤其是利用 Bootstrap 等框架時，它透過 CSS 的 position: fixed; 屬性，將元素（如標題列 <h3> 或導航欄）固定在瀏覽器視窗的頂端，讓使用者滾動頁面時該元素保持在原位不動，常見用途包括：固定導航欄 (Header)、返回頂部按鈕、即時通訊按鈕或浮動廣告，提供更好的使用者體驗。 
+用途詳解：
+固定導航：在長頁面中，固定導航列（header）讓用戶隨時能快速訪問主要功能。
+返回頂部按鈕：將「回到頂部」的圖標固定在視窗角落，方便用戶快速回到頁首。
+
+即時客服/聊天：固定客服或聊天小工具在螢幕一側，確保用戶在任何位置都能找到它。
+浮動廣告：固定廣告在頁面某處，不隨頁面捲動而消失。
+提升使用者體驗 (UX)：關鍵資訊或功能始終可見，不需回頭尋找。 
+fixed-top 的核心是 position: fixed;：
+參考點：以瀏覽器視窗 (viewport) 為參考。
+特性：不隨頁面滾動而移動，脫離正常文件流。
+實現方式：在 CSS 中加上 position: fixed; 配合 top: 0; 即可將元素固定在頂部。 
+fixed-top (來自 Bootstrap) 只是提供便利的 class 名稱，背後實現的功能就是 CSS 的 position: fixed; 屬性。 
+
+CSS 固定網頁 Header 的方式：position: fixed 與 position: sticky 差異解析
+最後更新：2024年11月1日
+在現代的網頁設計中，固定的導覽欄（Header 或 Menu）可以增強用戶體驗，讓使用者隨時能夠訪問重要的頁面選項。
+
+在 CSS 中，兩種常用的方法來實現固定導覽欄，分別是使用 position: fixed 和 position: sticky。
+
+本篇文章將針對這兩個屬性進行介紹，並比較它們的異同，幫助新手理解何時選擇哪一種方式。
+
+position: fixed 與 position: sticky 基本概念
+這兩個屬性，都能讓元素在滾動頁面時，保持「固定」位置，但它們的行為卻有很大不同：
+
+position: fixed：這種方式會將元素完全固定在視窗的某個位置，無論頁面怎麼滾動，元素都不會移動。
+position: sticky：這種方式則是一種「條件固定」。當元素滾動到特定位置時，才會開始固定，並保持在那個位置直到其父元素的邊界限制。
+position: fixed 的行為與範例
+使用 position: fixed 時，元素相對於視窗（Viewport）固定，而不是頁面的其他元素。
+
+無論用戶滾動到哪個位置，元素都保持在視窗中指定的位置，通常用於固定在頁面頂端或底端的元素。
+
+在這個範例中，header 元素會固定在視窗的頂部，隨著用戶滾動頁面不會移動。
+
+常見應用包括頁面的頂部導航欄、側邊欄等。
+
+position: fixed 的優缺點
+優點：
+讓導覽欄始終可見，適合需要長期展示的固定元素。
+缺點：
+占用畫面空間，可能導致內容被遮擋，特別是在移動設備上。
+沒有條件性或上下文，只能完全固定。
+position: sticky 的行為與範例
+position: sticky 可以理解為一種「條件性」的固定，元素會在滾動到特定位置時才開始固定，並且只在其父元素的範圍內有效。
+
+例如，position: sticky 可以在用戶滾動到某個部分時才將導航欄「吸附」在頂部，直到該段落結束。
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+在這個例子中，當頁面滾動到 header 元素的高度時，它才會「吸附」到頂部，隨著滾動保持固定，直到父元素的底部。
+
+position: sticky 的優缺點
+優點：
+只在特定位置才固定，讓頁面內容不會過度被遮擋，特別適合長文章或頁面多段內容。
+適用於需要在段落內部或特定區塊實現「粘附」效果的場景。
+缺點：
+依賴父元素的高度，父元素若過短，sticky 效果不明顯。
+在某些瀏覽器上有兼容性問題，尤其是較舊的瀏覽器。
+
+</p>
+<h3 class="sticky-top"></h3> 埋嚟揀 </h3>
+<p> 常見的應用場景
+全域性固定導航欄：當需要讓導航欄始終顯示時，使用 position: fixed。
+
+例如頁面頂部的固定導覽欄，適合小型網站或單頁應用。
+段落內部固定導航：如果頁面包含多段內容，而希望讓當前區塊的導航跟隨用戶滾動到該區段時顯示，可使用 position: sticky。
+
+這種效果經常用於長篇文章，讓用戶能隨時訪問區塊內的功能。
+結論
+position: fixed 和 position: sticky 都能夠固定導覽欄，但它們各有特定的應用場景。
+
+fixed 適合於需要完全固定的元素，而 sticky 更適合在特定滾動範圍內的「條件固定」。
+
+掌握這兩者的使用差異，可以更靈活地設計出使用者友好的導覽體驗。
+
+希望這篇文章幫助你，理解如何選擇合適的方式來固定導覽欄！
+
+
+1）滚动元素设置 scroll-padding-top
+示例的滚动条属于 html，所以在 html 元素上设置。
+
+如果滚动条在其他元素上，将 scroll-padding-top 设置到附滚动条的元素即可。
+
+html{
+  scroll-padding-top: 60px;
+}
+浏览器内置的支持，用法超轻便，兼容性如图：
+
+
+（2）padding+margin
+padding影响锚点元素的定位，margin不影响锚点元素的定位。所以使用padding调整锚点元素跳转后的位置，使用margin抵消padding对布局的影响。
+
+<h3 class="heading first" id="first">
+ 1.出现的时间、地点不同
+</h3>
+
+.first {    
+  padding-top: 60px;/* 60px是导航栏高度 */    
+  margin-top: -60px; 
+}
+
+
+
+
+
+优点
+此方案无需添加额外的元素，直接使用 css 可解决问题。
+
+缺点
+当标题的文档层级和段落的文档层级不一致时会导致遮盖其他元素。
+
+例如：标题使用了 relative 定位提升了文档层级。会出现鼠标无法选中标题上方被布局遮挡的段落，从而导致无法复制文档。
+
+
+
+动图封面
+
+
+（3）用span或a标签作为锚点元素
+非替换内联元素的padding不影响布局，但可以影响锚点位置。
+
+<h3 class="heading">
+ <span id="second" class="title_placeholder">
+ 2. require/exports 是运行时动态加载，import/export 是静态编译
+ </span>
+</h3>
+
+
+.title_placeholder { 
+   padding-top: 60px;
+}
+
+</p>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+
+</div>
+</body>
+</html>
